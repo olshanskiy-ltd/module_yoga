@@ -430,11 +430,14 @@ hr {
     flex-direction: column;
     width: 290px;
     margin: auto;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     box-shadow: 0px 0px 30px rgba(0,0,0, 0.1);
     border-radius: 10px;
     overflow: hidden;
     transition: box-shadow 0.2s;
+    height: 100%;
+    margin: 1em;
+    
 }
 .yoga_card:hover {
     box-shadow: 0px 0px 30px rgba(0,0,0, 0.4);
@@ -665,6 +668,7 @@ h3 {
         justify-content: space-between;
         width: 570px;
         
+        
     }
     .title_yoga_card {
         display: flex;
@@ -749,6 +753,8 @@ h3 {
         margin-right: 206px; */
 }   
 @media (min-width: 1200px) {
+
+        .yoga_card {margin: auto;}
     
         .menu__btn {
         display: none;
@@ -813,17 +819,31 @@ h3 {
         /* z-index: 1; */
     }
     
-    .yoga_cardlist {
+    /* .yoga_cardlist {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        /* align-items: center; */
         justify-content: center;
         padding-left: 50px;
         padding-right: 50px;
         padding-bottom: 215px;
         max-width: 1200px;
+    } */
+    .yoga_cardlist {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2vw;
+            padding-bottom: 215px;
+            max-width: 1200px;
     }
+    .yoga_cardlist > div {
+        font-size: 5vw;
+        /* padding: .5em; */
+        /* background: gold; */
+        /* text-align: center; */
+      }
+   
     .logo {
         margin-left: 115px;
     }
